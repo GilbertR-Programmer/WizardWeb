@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>We Be Wizards</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#rules">Rules</a></li>
+            <li><a href="#character-creator">Character Creator</a></li>
+        </ul>
+    </nav>
+
+    <h1>We Be Wizards!</h1>
+
+    <section id="rules">
+        <h1>Rules</h1>
+        <p>We be wizards is a simple game with simple rules... at first. All the rules you need to play are below</p>
+        <table>
+            <tr>
+                <td>1</td>
+                <td>You are a wizard who knows four spells.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>You roll 1d4 when you want to cast a spell and cast that spell.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>If you take four hits you die.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>At the end of every game session add two new rules, all players must agree on the new rules.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="character-creator">
+        <h1>Character Creator</h1>
+        <button onclick="generateCharacter()">New Character</button>
+
+        <p>Name : <span id="characterName">?</span></p>
+        <p>Spells</p>
+        <table>
+            <tr>
+                <td>1</td>
+                <td><span id="spell1">?</span></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><span id="spell2">?</span></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><span id="spell3">?</span></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><span id="spell4">?</span></td>
+            </tr>
+        </table>
+    </section>
+
+    <script>
+        // Array of first names from The Sopranos
+        const sopranosNames = [
+            "Tony", "Carmela", "Christopher", "Silvio", "Paulie", "Meadow", 
+            "A.J.", "Janice", "Junior", "Livia", "Artie", "Adriana", 
+            "Vito", "Bobby", "Ralph", "Johnny", "Furio", "Rosalie"
+        ];
+
+        // Array of fun magic-related spells
+        const magicSpells = [
+            "Summon one thousand bees", "Fire blast", "Create frog", 
+            "Telekinesis", "Water breathing", "Invisibility", 
+            "Levitation", "Become cat", "Summon thunderstorm", 
+            "Teleportation", "Ice shard", "Healing touch", 
+            "Shadow cloak", "Lightning strike", "Plant growth", 
+            "Summon familiar", "Time freeze", "Shape shift",
+            "Summon demon", "Contact nearest dog"
+        ];
+
+        // Function to get a random element from an array
+        function randomArrayElement(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+
+        // Function to generate a new character with a random name and random spells
+        function generateCharacter() {
+            document.getElementById("characterName").innerText = randomArrayElement(sopranosNames);
+            document.getElementById("spell1").innerText = randomArrayElement(magicSpells);
+            document.getElementById("spell2").innerText = randomArrayElement(magicSpells);
+            document.getElementById("spell3").innerText = randomArrayElement(magicSpells);
+            document.getElementById("spell4").innerText = randomArrayElement(magicSpells);
+        }
+
+        generateCharacter();
+    </script>
+
+</body>
+
+</html>

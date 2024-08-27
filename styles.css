@@ -47,9 +47,18 @@ h1 {
 section {
     padding: 20px;
     background-color: rgba(0, 0, 50, 0.7); /* Dark blue, semi-transparent background */
-    margin: 20px;
+    margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    align-self: auto;
+    width: 50%;
+
+}
+
+@media screen and (max-width: 800px) {
+    section {
+        width:  80%;
+    }
 }
 
 table, td {

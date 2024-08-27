@@ -1,0 +1,89 @@
+/* Mobile-only styles */
+
+/* Base mobile font size */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1em; /* Base font size for scaling */
+    margin: 0;
+    padding: 0;
+    background-image: url('wizardBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #f0f0f0; /* Light text color for better readability */
+}
+
+nav {
+    background-color: rgba(0, 0, 50, 0.8); /* Dark blue, semi-transparent */
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+nav ul li a {
+    color: #f0f0f0; /* Light text color */
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    background-color: rgba(0, 0, 50, 0.7); /* Slightly lighter background for links */
+    border-radius: 0.25em;
+}
+
+nav ul li a:hover {
+    background-color: #575757; /* Slightly lighter on hover */
+}
+
+h1 {
+    text-align: center;
+    margin: 1.5em 0;
+    color: #f0f0f0; /* Light text color */
+    text-shadow: 0.125em 0.125em 0.25em #000000; /* Text shadow for a magical effect */
+}
+
+section {
+    padding: 1em;
+    background-color: rgba(0, 0, 50, 0.7); /* Dark blue, semi-transparent background */
+    margin: 1em;
+    border-radius: 0.625em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+table {
+    width: 100%;
+    border: 0.0625em solid #f0f0f0;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+td {
+    border: 0.0625em solid #f0f0f0;
+    padding: 0.5em;
+    text-align: center;
+    background-color: rgba(0, 0, 50, 0.8); /* Dark blue, semi-transparent background for table cells */
+}
+
+button {
+    width: 100%;
+    margin: 1em 0;
+    padding: 0.75em;
+    font-size: 1.125em;
+    background-color: #333366; /* Dark blue button */
+    color: #f0f0f0;
+    border: none;
+    border-radius: 0.3125em;
+    cursor: pointer;
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.5); /* Shadow for a magical glow effect */
+}
+
+button:hover {
+    background-color: #444488; /* Slightly lighter on hover */
+}

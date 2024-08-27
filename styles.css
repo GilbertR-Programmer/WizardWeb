@@ -1,84 +1,164 @@
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif, Trebuchet;
+    background-color: #f4f4f9;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-image: url('wizardBackground.jpg');
+    background-image: url("wizardBackground.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    color: #f0f0f0; /* Light text color for better readability */
 }
 
 nav {
-    background-color: rgba(0, 0, 50, 0.8); /* Dark blue, semi-transparent */
-    padding: 10px;
+    background-color: #260047;
+    padding: 1em;
     text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav ul li a {
-    color: #f0f0f0; /* Light text color */
+nav a {
+    color: #fff;
+    margin: 0 15px;
     text-decoration: none;
-    padding: 8px 16px;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    background-color: #575757; /* Slightly lighter on hover */
-    border-radius: 4px;
+td a {
+    margin: 0;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-h1 {
+a:hover {
+    text-decoration: underline;
+    color: #670074;
+}
+
+header {
+    background-color: #3d0049;
+    color: #fff;
+    padding: 2em 0;
     text-align: center;
-    margin-top: 20px;
-    color: #f0f0f0; /* Light text color */
-    text-shadow: 2px 2px 4px #000000; /* Text shadow for a magical effect */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h2 {
+    margin: 0.5em 0;
+    padding: .5em;
+    font-size: 1.5em;
+    color: #7f8c8d;
+}
+
+header img {
+    border-radius: 50%;
+    border: 5px solid #260047;
 }
 
 section {
-    padding: 20px;
-    background-color: rgba(0, 0, 50, 0.7); /* Dark blue, semi-transparent background */
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    padding: 2em;
+    margin: 1em auto;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-table, td {
-    border: 1px solid #f0f0f0;
-    border-collapse: collapse;
-    padding: 8px;
-    margin: 0 auto;
-    margin-top: 10px;
-    background-color: rgba(0, 0, 50, 0.8); /* Dark blue, semi-transparent background for tables */
+section h4 {
+    color: #260047;
+    border-bottom: 2px solid #260047;
+    padding-bottom: 0.5em;
 }
 
-button {
-    margin-bottom: 10px;
+section ul, section ol {
+    margin: 0;
+    padding: 0 1em;
+}
+
+section li {
+    margin: 0.5em 0;
+}
+
+form {
+    margin: 1em 0;
+}
+
+label {
     display: block;
-    margin: 20px auto;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: calc(100% - 22em);
+    padding: 10px;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #260047;
+    color: #fff;
     padding: 10px 20px;
-    font-size: 16px;
-    background-color: #333366; /* Dark blue button */
-    color: #f0f0f0;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for a magical glow effect */
+    font-weight: bold;
 }
 
-button:hover {
-    background-color: #444488; /* Slightly lighter on hover */
+input[type="submit"]:hover {
+    background-color: #3d0049;
 }
 
-p, td {
+footer {
+    background-color: #260047;
+    color: #fff;
     text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+footer small {
+    display: block;
+    margin: 0.5em 0;
+}
+
+footer cite {
+    font-style: normal;
+    color: #7f8c8d;
+}
+
+section h1 {
+    color: #260047;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #260047;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f4f9;
+}
+
+tr:hover {
+    background-color: #ddd;
 }

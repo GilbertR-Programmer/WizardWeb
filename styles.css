@@ -92,10 +92,13 @@ p, td {
     text-align: center;
 }
 
-.left{
-    text-align: left;
+p{
     padding-left: 5%;
     padding-right: 5%;
+}
+
+.left{
+    text-align: left !important;
 } 
 
 /* Default state of the link */

@@ -98,6 +98,12 @@ p{
     padding-right: 5% !important;
 }
 
+.centre{
+    text-align: center !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+}
+
 .left{
     text-align: left !important;
 } 

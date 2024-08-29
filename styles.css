@@ -37,7 +37,7 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
-h1 {
+h1,h2 {
     text-align: center;
     margin-top: 20px;
     color: #f0f0f0; /* Light text color */
@@ -91,6 +91,12 @@ button:hover {
 p, td {
     text-align: center;
 }
+
+.left{
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+} 
 
 /* Default state of the link */
 a {

@@ -88,11 +88,12 @@ button:hover {
     background-color: #444488; /* Slightly lighter on hover */
 }
 
-p, td {
+td {
     text-align: center;
 }
 
 p{
+    text-align: center;
     padding-left: 5%;
     padding-right: 5%;
 }

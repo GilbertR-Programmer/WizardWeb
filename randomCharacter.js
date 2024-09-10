@@ -27,9 +27,9 @@ const magicSpells = [
     "Summon wise feline", "Conjure draught", 
     "Summon enraged goose", "Summon giant ant", 
     "Conjure pizza delivery", "Become mildly sticky", 
-    "Become mustached", "Un toast object",
-    "Behead eldest daughter", "Divine opinion"
-
+    "Become moustached", "Un toast object",
+    "Behead eldest daughter", "Divine opinion",
+    "Warm hands"
 ];
 
 // Function to get a random element from an array

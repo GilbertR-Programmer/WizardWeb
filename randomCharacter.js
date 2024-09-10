@@ -78,10 +78,10 @@ const entities = [
     "cat", "familiar", "demon", "dog", "man", 
     "shopkeeper", "wise feline", "bat", 
     "enraged goose", "giant ant", 
-    "gorilla", "sand witch", 
+    "gorilla",
     "goblin", "dragon", "zombie", "vampire", 
     "werewolf", "mermaid", "fairy", "eldest daughter", 
-    "opinion", "bee", "frog","sand witch",
+     "bee", "frog","sand witch",
     "youngest son"
 ];
 

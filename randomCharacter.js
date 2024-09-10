@@ -16,7 +16,20 @@ const magicSpells = [
     "Summon demon", "Contact nearest dog","Create gabagool",
     "Speak Italian", "Hasten man", "Launch disc",
     "Conjure Damp", "Summon Overcast", "Commune with shopkeeper",
-    "Summon parental disappointment"            
+    "Summon parental disappointment", "Conjure ham sandwich",
+    "Conjure sand witch", "Flay", "Ritual of exorcism",
+    "Orbital bombardment", "Charm person", "Heal",
+    "Summon plague", "Mirror self", "Comprehend script",
+    "Conjure gorilla", "Open portal unto the 9th circle of hell",
+    "Summon twelve bats", "Commune with wife",
+    "Summon copious spaghetti", "Summon existential dread", 
+    "Conjure lost sock", "Teleport unto nearest market", 
+    "Summon wise feline", "Conjure draught", 
+    "Summon enraged goose", "Summon giant ant", 
+    "Conjure pizza delivery", "Become mildly sticky", 
+    "Become mustached", "Un toast object",
+    "Behead eldest daughter", "Divine opinion"
+
 ];
 
 // Function to get a random element from an array

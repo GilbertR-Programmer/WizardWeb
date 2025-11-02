@@ -34,6 +34,7 @@ const spells = [
   "{Preword} {Item}",
   "{Preword} {Creature}",
   "{Element} Step",
+  "{Element} Shard",
   "Evade",
   "Hasten",
   "Strength",
@@ -100,7 +101,6 @@ const postwords = [
   "Blast",
   "Cloak",
   "Strike",
-  "Shard",
   "Shape"
 ];
 

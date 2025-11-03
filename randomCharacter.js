@@ -17,24 +17,40 @@ const names = [
   "Ralph",
   "Johnny",
   "Furio",
-  "Rosalie"
+  "Rosalie",
 ];
 
 const spells = [
-  "{Element} {Postword}",
-  "{Creature} {Postword}",
-  "{Preword} {Item}",
-  "{Preword} {Creature}",
-  "{Element} {Postword}",
-  "{Creature} {Postword}",
-  "{Preword} {Item}",
-  "{Preword} {Creature}",
-  "{Element} {Postword}",
-  "{Creature} {Postword}",
-  "{Preword} {Item}",
-  "{Preword} {Creature}",
+  "{Element} Bolt",
+  "{Element} Blast",
+  "{Element} Cloak",
+  "{Element} Strike",
   "{Element} Step",
   "{Element} Shard",
+  "Conjure {Item}",
+  "Summon {Item}",
+  "Create {Item}",
+  "Conjure {Creature}",
+  "Summon {Creature}",
+  "Create {Creature}",
+  "{Element}storm",
+  "{Creature} Shape",
+  //we add the above ones twice so they happen more often
+  "{Element} Bolt",
+  "{Element} Blast",
+  "{Element} Cloak",
+  "{Element} Strike",
+  "{Element} Step",
+  "{Element} Shard",
+  "Conjure {Item}",
+  "Summon {Item}",
+  "Create {Item}",
+  "Conjure {Creature}",
+  "Summon {Creature}",
+  "Create {Creature}",
+  "{Element}storm",
+  "{Creature} Shape",
+  "{Creature} Blast",
   "Evade",
   "Hasten",
   "Strength",
@@ -85,23 +101,8 @@ const spells = [
   "Mind Peek",
   "Silence Sphere",
   "Noise Cube",
-  "Earth Wall"
-];
-
-// Prewords Summon/Create/Conjure
-const prewords = [
-    "Summon",
-    "Create",
-    "Conjure"
-];
-
-// Postwords
-const postwords = [
-  "Bolt",
-  "Blast",
-  "Cloak",
-  "Strike",
-  "Shape"
+  "Earth Wall",
+  "Levitate",
 ];
 
 // Elements
@@ -142,7 +143,7 @@ const creatures = [
   "Centipede ",
   "Orc",
   "Kobold",
-  "Giant Ant"
+  "Giant Ant",
 ];
 
 // items
@@ -165,7 +166,7 @@ const items = [
   "Shovel",
   "Key",
   "Book",
-  "Ring"
+  "Ring",
 ];
 
 // professions
@@ -182,7 +183,7 @@ const professions = [
   "Butcher",
   "Beekeeper",
   "Tailor",
-  "Baker"
+  "Baker",
 ];
 
 // Function to get a random element from an array
@@ -196,8 +197,6 @@ function randomSpell() {
   let spell = randomArrayElement(spells);
   //return it with a substitutuiion word if it needs one
   return spell
-    .replace("{Preword}", randomArrayElement(prewords))
-    .replace("{Postword}", randomArrayElement(postwords))
     .replace("{Element}", randomArrayElement(elements))
     .replace("{Creature}", randomArrayElement(creatures))
     .replace("{Profession}", randomArrayElement(professions))
@@ -206,7 +205,8 @@ function randomSpell() {
 
 // Function to generate a new character with a random name and random spells
 function generateCharacter() {
-  document.getElementById("characterName").innerText = randomArrayElement(names);
+  document.getElementById("characterName").innerText =
+    randomArrayElement(names);
   document.getElementById("spell1").innerText = randomSpell();
   document.getElementById("spell2").innerText = randomSpell();
   document.getElementById("spell3").innerText = randomSpell();

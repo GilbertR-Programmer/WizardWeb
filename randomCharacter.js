@@ -1,3 +1,5 @@
+// Code for making the random characters
+
 // Array of first names from The Sopranos
 const names = [
   "Tony",
@@ -213,4 +215,20 @@ function generateCharacter() {
   document.getElementById("spell4").innerText = randomSpell();
 }
 
-window.onload = generateCharacter;
+// Code For Adding The Footer
+// Array of first names from The Sopranos
+const footer =
+  "We be wizards V1.1.2, Use however you want, Created by Gilbert Reid";
+
+// Function to generate a new character with a random name and random spells
+function addFooter() {
+  document.getElementById("footer").innerText = footer;
+}
+
+// Onload
+function loadDuties() {
+  generateCharacter();
+  addFooter();
+}
+
+window.onload = loadDuties;

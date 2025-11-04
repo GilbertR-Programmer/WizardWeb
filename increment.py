@@ -8,16 +8,22 @@ with open("runScript.js", "r") as f:
     content = f.read()
 
 # Use regular expression to find the version number
-version_number = re.search(r"V(\d+\.\d+\.\d+)", content).group(1)
+original_version_number = re.search("We be wizards V(\d+)", content).group(0)
+print(original_version_number)
 
 # Increment the version number
-version_number = version_number.split(".")
-version_number[-1] = str(int(version_number[-1]) + 1)
-version_number = ".".join(version_number)
+new_version_number = original_version_number.split("V")
+print(new_version_number)
+new_version_number[1] = str(int(new_version_number[1]) + 1)
+print(new_version_number)
+new_version_number = "V".join(new_version_number)
+print(new_version_number)
 
 # Replace the version number in the file
-content = re.sub(r"V\d+\.\d+\.\d+", f"V{version_number}", content)
+content = re.sub(original_version_number, new_version_number, content)
 
 # Write the updated content back to the file
 with open("runScript.js", "w") as f:
     f.write(content)
+
+    import re

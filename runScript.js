@@ -217,7 +217,7 @@ function generateCharacter() {
 
 // Code For Adding The Footer
 const footer =
-  "We be wizards V3, Use however you want, Created by Gilbert Reid";
+  "We be wizards V38, Use however you want, Created by Gilbert Reid";
 
 // Function to generate a new character with a random name and random spells
 function addFooter() {

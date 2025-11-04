@@ -1,4 +1,4 @@
-name: version inrement
+name: version increment
 run-name: ${{ github.actor }} updating version
 on: [push]
 jobs:
@@ -15,3 +15,5 @@ jobs:
       - name: execute py script # run file
         run: |
           python increment.py
+      - name: commit changes
+        uses: stefanzweifel/git-auto-commit-action@v7

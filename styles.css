@@ -65,6 +65,8 @@ table, td {
     border: 1px solid #f0f0f0;
     border-collapse: collapse;
     padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin: 0 auto;
     margin-top: 10px;
     background-color: rgba(0, 0, 50, 0.8); /* Dark blue, semi-transparent background for tables */

@@ -216,9 +216,8 @@ function generateCharacter() {
 }
 
 // Code For Adding The Footer
-// Array of first names from The Sopranos
 const footer =
-  "We be wizards V1.1.2, Use however you want, Created by Gilbert Reid";
+  "We be wizards V2, Use however you want, Created by Gilbert Reid";
 
 // Function to generate a new character with a random name and random spells
 function addFooter() {
@@ -227,8 +226,10 @@ function addFooter() {
 
 // Onload
 function loadDuties() {
-  generateCharacter();
   addFooter();
+  if(document.getElementById("spell1") != null){
+    generateCharacter();
+  }
 }
 
 window.onload = loadDuties;

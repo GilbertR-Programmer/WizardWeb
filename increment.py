@@ -26,4 +26,4 @@ content = re.sub(original_version_number, new_version_number, content)
 with open("runScript.js", "w") as f:
     f.write(content)
 
-    import re
+print("Version number updated to " + new_version_number)

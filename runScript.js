@@ -228,7 +228,7 @@ function getAllSpellsInTableFormat(spellText, replaceText, replaceList) {
   let returnSpellList = "";
   let elementList = getAllSpellsFromText(spellText, replaceText, replaceList);
   for (let j = 0; j < elementList.length; j++) {
-    returnSpellList += elementList[j] + ".    ";
+    returnSpellList += elementList[j] + ". ";
   }
   console.log(returnSpellList);
   return returnSpellList;
@@ -250,7 +250,7 @@ function populateFullSpellList() {
     } else if (currentSpell.includes("{Item}")) {
       spellList += getAllSpellsInTableFormat(spells[i], "{Item}", items);
     } else {
-      spellList += currentSpell + ".    ";
+      spellList += currentSpell + ". ";
     }
   }
   document.getElementById("fullSpellList").innerHTML = '<li>' + spellList + '</li>';

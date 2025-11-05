@@ -52,13 +52,20 @@ section {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
     align-self: auto;
     width: 50%;
-
 }
 
 @media screen and (max-width: 800px) {
     section {
         width:  80%;
     }
+}
+
+li {
+    color: #f0f0f0; /* Light text color */
+    text-align: center;
+    margin: 10px;
+    list-style-type: none;
+    word-wrap: normal;
 }
 
 table, td {
@@ -70,6 +77,7 @@ table, td {
     margin: 0 auto;
     margin-top: 10px;
     background-color: rgba(0, 0, 50, 0.8); /* Dark blue, semi-transparent background for tables */
+    table-layout: fixed;
 }
 
 button {

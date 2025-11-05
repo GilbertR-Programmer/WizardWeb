@@ -61,7 +61,6 @@ const spells = [
   "Commune with {Profession}",
   "Commune with {Creature}",
   "Heal",
-  "{Element}storm",
   "Speak {Creature}",
   "Illusion",
   "Mirror Self",
@@ -215,6 +214,48 @@ function generateCharacter() {
   document.getElementById("spell4").innerText = randomSpell();
 }
 
+function getAllSpellsFromText(spellText, replaceText, replaceList) {
+  let returnList = [];
+  for (let i = 0; i < replaceList.length; i++) {
+    let replacedSpell = spellText.replace(replaceText, replaceList[i]);
+    returnList.push(replacedSpell);
+  }
+  console.log(returnList);
+  return returnList;
+}
+
+function getAllSpellsInTableFormat(spellText, replaceText, replaceList) {
+  let returnSpellList = "";
+  let elementList = getAllSpellsFromText(spellText, replaceText, replaceList);
+  for (let j = 0; j < elementList.length; j++) {
+    returnSpellList += elementList[j] + ".    ";
+  }
+  console.log(returnSpellList);
+  return returnSpellList;
+}
+
+//function to populate the full spell ist on the advanced page
+function populateFullSpellList() {
+  let spellList = "";
+  //get only unique spells
+  let uniqueSpells = [...new Set(spells)];
+  for (let i = 0; i < uniqueSpells.length; i++) {
+    let currentSpell = uniqueSpells[i];
+    if (currentSpell.includes("{Element}")) {
+      spellList += getAllSpellsInTableFormat(uniqueSpells[i], "{Element}", elements);
+    } else if (currentSpell.includes("{Creature}")) {
+      spellList += getAllSpellsInTableFormat(uniqueSpells[i], "{Creature}", creatures);
+    } else if (currentSpell.includes("{Profession}")) {
+      spellList += getAllSpellsInTableFormat(uniqueSpells[i], "{Profession}", professions);
+    } else if (currentSpell.includes("{Item}")) {
+      spellList += getAllSpellsInTableFormat(spells[i], "{Item}", items);
+    } else {
+      spellList += currentSpell + ".    ";
+    }
+  }
+  document.getElementById("fullSpellList").innerHTML = '<li>' + spellList + '</li>';
+}
+
 // Code For Adding The Footer
 const footer =
   "We be wizards V40, Use however you want, Created by Gilbert Reid";
@@ -226,9 +267,13 @@ function addFooter() {
 
 // Onload
 function loadDuties() {
+    console.log("running load duties");
   addFooter();
-  if(document.getElementById("spell1") != null){
+  if (document.getElementById("spell1") != null) {
     generateCharacter();
+  }
+  if (document.getElementById("fullSpellList") != null) {
+    populateFullSpellList();
   }
 }
 

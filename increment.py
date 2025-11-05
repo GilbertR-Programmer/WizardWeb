@@ -4,8 +4,8 @@
 import re
 
 # Open the file in read mode
-with open("runScript.js", "r") as f:
-    content = f.read()
+with open("runScript.js", "r") as runScript:
+    content = runScript.read()
 
 # Use regular expression to find the version number
 original_version_number = re.search("We be wizards V(\d+)", content).group(0)
@@ -23,7 +23,7 @@ print(new_version_number)
 content = re.sub(original_version_number, new_version_number, content)
 
 # Write the updated content back to the file
-with open("runScript.js", "w") as f:
-    f.write(content)
+with open("runScript.js", "w") as runScript:
+    runScript.write(content)
 
 print("Version number updated to " + new_version_number)

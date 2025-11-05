@@ -258,7 +258,7 @@ function populateFullSpellList() {
 
 // Code For Adding The Footer
 const footer =
-  "We be wizards V41, Use however you want, Created by Gilbert Reid";
+  "We be wizards V42, Use however you want, Created by Gilbert Reid";
 
 // Function to generate a new character with a random name and random spells
 function addFooter() {

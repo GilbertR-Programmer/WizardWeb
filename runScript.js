@@ -104,6 +104,8 @@ const spells = [
   "Noise Cube",
   "Earth Wall",
   "Levitate",
+  "Place Swap",
+  "Midas touch"
 ];
 
 // Elements
@@ -196,7 +198,7 @@ function randomArrayElement(array) {
 function randomSpell() {
   // Get a random spell
   let spell = randomArrayElement(spells);
-  //return it with a substitutuiion word if it needs one
+  //return it with a substitution word if it needs one
   return spell
     .replace("{Element}", randomArrayElement(elements))
     .replace("{Creature}", randomArrayElement(creatures))
@@ -220,7 +222,7 @@ function getAllSpellsFromText(spellText, replaceText, replaceList) {
     let replacedSpell = spellText.replace(replaceText, replaceList[i]);
     returnList.push(replacedSpell);
   }
-  console.log(returnList);
+  //console.log(returnList);
   return returnList;
 }
 
@@ -230,7 +232,7 @@ function getAllSpellsInTableFormat(spellText, replaceText, replaceList) {
   for (let j = 0; j < elementList.length; j++) {
     returnSpellList += elementList[j] + ". ";
   }
-  console.log(returnSpellList);
+  //console.log(returnSpellList);
   return returnSpellList;
 }
 
@@ -258,7 +260,7 @@ function populateFullSpellList() {
 
 // Code For Adding The Footer
 const footer =
-  "We be wizards V43, Use however you want, Created by Gilbert Reid";
+  "We be wizards V42, Use however you want, Created by Gilbert Reid";
 
 // Function to generate a new character with a random name and random spells
 function addFooter() {
@@ -267,7 +269,7 @@ function addFooter() {
 
 // Onload
 function loadDuties() {
-    console.log("running load duties");
+  //console.log("running load duties");
   addFooter();
   if (document.getElementById("spell1") != null) {
     generateCharacter();
